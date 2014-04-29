@@ -1,4 +1,4 @@
-Prototype News Ticker {#welcome}
+Prototype News Ticker
 =====================
 Prototype News Ticker brings a lightweight and easy to use news ticker.
 
