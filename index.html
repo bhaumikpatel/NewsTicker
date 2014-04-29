@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="News Ticker : Prototype News Ticker" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>News Ticker</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bhaumikpatel/NewsTicker">View on GitHub</a>
+
+          <h1 id="project_title">News Ticker</h1>
+          <h2 id="project_tagline">Prototype News Ticker</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bhaumikpatel/NewsTicker/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bhaumikpatel/NewsTicker/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="prototype-news-ticker" class="anchor" href="#prototype-news-ticker"><span class="octicon octicon-link"></span></a>Prototype News Ticker</h1>
+
+<p>Prototype News Ticker brings a lightweight and easy to use news ticker.</p>
+
+<hr><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h4>
+<a name="step-1-link-required-files" class="anchor" href="#step-1-link-required-files"><span class="octicon octicon-link"></span></a>Step 1: Link required files</h4>
+
+<p>First and most important, the Prototype library needs to be included (no need to download - link directly from Google).</p>
+
+<pre><code>&lt;!-- Prototype library (served from Google) --&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"&gt;&lt;/script&gt;
+&lt;script src="/js/effects.js"&gt;&lt;/script&gt;
+&lt;!-- News Ticker Javascript file --&gt;
+&lt;script src="/js/newsticker.js"&gt;&lt;/script&gt;
+&lt;!-- News Ticker CSS file --&gt;
+&lt;link href="/css/newsticker.css" rel="stylesheet" /&gt;
+</code></pre>
+
+<h4>
+<a name="step-2-create-html-markup" class="anchor" href="#step-2-create-html-markup"><span class="octicon octicon-link"></span></a>Step 2: Create HTML markup</h4>
+
+<p>Create a <code>&lt;div class="newsticker"&gt;</code> element, with a <code>&lt;li&gt;</code> for each news. <code>&lt;li&gt;</code> can contain images or any other HTML content!</p>
+
+<pre><code>&lt;div id="newsticker_default" class="newsticker"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;News 1:&lt;/strong&gt; The is a sample newsticker message 01&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;News 2:&lt;/strong&gt; The is a sample newsticker message 02&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;News 3:&lt;/strong&gt; The is a sample newsticker message 03&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>
+<a name="step-3-call-the-news-ticker" class="anchor" href="#step-3-call-the-news-ticker"><span class="octicon octicon-link"></span></a>Step 3: Call the News Ticker</h4>
+
+<p>Call <code>.Newsticker()</code> on <code>&lt;div id="newsticker_default"&gt;</code>.</p>
+
+<pre><code>Event.observe(window, "load", function () {
+    new Newsticker("newsticker_default")
+}, false);
+</code></pre>
+
+<h2>
+<a name="configuration-options" class="anchor" href="#configuration-options"><span class="octicon octicon-link"></span></a>Configuration options</h2>
+
+<p><strong>interval</strong> News transition duration (in ms)</p>
+
+<pre><code>interval: 6000
+</code></pre>
+
+<p><strong>containerSetStyle</strong> News Ticker container style (<code>id="newsticker_default"</code>)</p>
+
+<pre><code>containerSetStyle: null
+</code></pre>
+
+<p><strong>newsContainerSetStyle</strong> News Ticker UL container style</p>
+
+<pre><code>newsContainerSetStyle: null
+</code></pre>
+
+<p><strong>newsInnerContainerSetStyle</strong> Ticker LI container style</p>
+
+<pre><code>newsInnerContainerSetStyle: null
+</code></pre>
+
+<p><strong>before</strong> Append custom html before container</p>
+
+<pre><code>before: null
+</code></pre>
+
+<p><strong>after</strong> Append custom html after container</p>
+
+<pre><code>after: null
+</code></pre>
+
+<p><strong>innerBefore</strong> Append custom html before UL container</p>
+
+<pre><code>innerBefore: null
+</code></pre>
+
+<p><strong>innerAfter</strong> Append custom html after UL container</p>
+
+<pre><code>innerAfter: null
+</code></pre>
+
+<hr><h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<h4>
+<a name="default" class="anchor" href="#default"><span class="octicon octicon-link"></span></a>Default</h4>
+
+<p><img src="https://lh3.googleusercontent.com/-j9Hvu-cAbTM/U1_GuHXHhxI/AAAAAAAAEDU/JuHgB2dOaA8/w1050-h45-no/default.png" alt="Default Settings"></p>
+
+<pre><code>Event.observe(window, "load", function () {
+    new Newsticker("newsticker_default")
+}, false);
+</code></pre>
+
+<h4>
+<a name="custom-design" class="anchor" href="#custom-design"><span class="octicon octicon-link"></span></a>Custom Design</h4>
+
+<p><img src="https://lh4.googleusercontent.com/-PnYfH9aYmjk/U1_GuEWbNuI/AAAAAAAAEDY/Vq9Ffr2KiuU/w1050-h46-no/design_1.png" alt="Custom Design"></p>
+
+<pre><code>Event.observe(window, "load", function () {
+    new Newsticker("newsticker",
+        {
+            interval: 5000,
+            containerSetStyle: { 'color': '#8A6D3B', 'background': '#212A34', 'width': '100%', 'float': 'left', 'padding': '10px 0px 10px 0px' },
+            newsContainerSetStyle: { 'width': '94.33%', 'float': 'left', 'padding': '0px 5px 0px 0px', 'border': '0px solid #212A34' },
+            newsInnerContainerSetStyle: { 'color': '#57697C', 'background': '#FFF', 'padding-left': '10px' },
+            innerBefore: '&lt;div style="width:5%;float:left;text-align: center;color:#fff;"&gt;News&lt;/div&gt;'
+        })
+}, false);
+
+</code></pre>
+
+<p><img src="https://lh4.googleusercontent.com/-qdJu0wYPVu8/U1_GuHivBrI/AAAAAAAAEDg/oqLStww-zYc/w1050-h46-no/design_2.png" alt="Custom Design"></p>
+
+<pre><code>Event.observe(window, "load", function () {
+    new Newsticker("newsticker_1",
+        {
+            interval: 5000,
+            containerSetStyle: { 'color': '#8A6D3B', 'background': '#16a085', 'width': '94%', 'float': 'left', 'padding': '10px 0px 10px 10px' },
+            newsContainerSetStyle: { 'width': '100%', 'float': 'left', 'padding': '0px', 'border': '0px solid #212A34' },
+            newsInnerContainerSetStyle: { 'color': '#57697C', 'background': '#FFF', 'padding-left': '10px' },
+            after: '&lt;div style="width:5%;float:left;text-align: center;color:#fff;background-color:#16a085;padding:10px 0px 10px 0px;"&gt;News&lt;/div&gt;'
+        })
+}, false);
+
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">News Ticker maintained by <a href="https://github.com/bhaumikpatel">bhaumikpatel</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-46102911-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
