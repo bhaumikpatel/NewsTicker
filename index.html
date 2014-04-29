@@ -1,0 +1,121 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Newsticker</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/newsticker.css" type="text/css" />
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="js/effects.js"></script>
+    <script type="text/javascript" src="js/newsticker.js"></script>
+</head>
+<body>
+    <strong>Default</strong>
+    <div id="newsticker_default" class="newsticker">
+        <ul>
+            <li><strong>News 1:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+            <li><strong>News 2:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+            <li><strong>News 3:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Event.observe(window, "load", function () {
+            new Newsticker("newsticker_default")
+        }, false);
+        //]]>
+    </script>
+    <br />
+    <strong>Custom Design</strong>
+    <div id="newsticker" class="newsticker">
+        <ul>
+            <li><strong>News 1:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+            <li><strong>News 2:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+            <li><strong>News 3:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Event.observe(window, "load", function () {
+            new Newsticker("newsticker",
+                {
+                    interval: 5000,
+                    containerSetStyle: { 'color': '#8A6D3B', 'background': '#212A34', 'width': '100%', 'float': 'left', 'padding': '10px 0px 10px 0px' },
+                    newsContainerSetStyle: { 'width': '94.33%', 'float': 'left', 'padding': '0px 5px 0px 0px', 'border': '0px solid #212A34' },
+                    newsInnerContainerSetStyle: { 'color': '#57697C', 'background': '#FFF', 'padding-left': '10px' },
+                    innerBefore: '<div style="width:5%;float:left;text-align: center;color:#fff;">News</div>'
+                })
+        }, false);
+        //]]>
+    </script>
+    <br />
+    <br />
+    <div style="min-height: 45px; background-color: #16a085; width: 100%; float: left;">
+        <div id="newsticker_1" class="newsticker">
+            <ul>
+                <li><strong>News 1:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01 <a href="#" class="read-more">read more &#187;</a></li>
+                <li><strong>News 2:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01 <a href="#" class="read-more">read more &#187;</a></li>
+                <li><strong>News 3:</strong> The is a sample newsticker message 01 The is a sample newsticker message 01 <a href="#" class="read-more">read more &#187;</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Event.observe(window, "load", function () {
+            new Newsticker("newsticker_1",
+                {
+                    interval: 5000,
+                    containerSetStyle: { 'color': '#8A6D3B', 'background': '#16a085', 'width': '94%', 'float': 'left', 'padding': '10px 0px 10px 10px' },
+                    newsContainerSetStyle: { 'width': '100%', 'float': 'left', 'padding': '0px', 'border': '0px solid #212A34' },
+                    newsInnerContainerSetStyle: { 'color': '#57697C', 'background': '#FFF', 'padding-left': '10px' },
+                    after: '<div style="width:5%;float:left;text-align: center;color:#fff;background-color:#16a085;padding:10px 0px 10px 0px;">News</div>'
+                })
+        }, false);
+        //]]>
+    </script>
+    <br />
+    <br />
+    <div>
+        <div id="newsticker_2" class="newsticker_action_call">
+            <ul>
+                <li><strong>News 1:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+                <li><strong>News 2:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+                <li><strong>News 3:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Event.observe(window, "load", function () {
+            new Newsticker("newsticker_2",
+                {
+                    interval: 5000
+                })
+        }, false);
+        //]]>
+    </script>
+     <br />
+    <br />
+    <div>
+        <div id="newsticker_3" class="newsticker_action_call">
+            <ul>
+                <li>
+                    <img src="http://placehold.it/200/8e44ad/FFF&text=News 1" alt="Alternate Text" style="float: left;margin-right: 5px;" /> <h4>Title 1</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+                <li><img src="http://placehold.it/200/2980b9/FFF&text=News 2" alt="Alternate Text" style="float: left;margin-right: 5px;" /> <h4>Title 2</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+                <li><img src="http://placehold.it/200/c0392b/FFF&text=News 3" alt="Alternate Text" style="float: left;margin-right: 5px;" /> <h4>Title 3</h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled <a href="#" class="read-more">read more &#187;</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Event.observe(window, "load", function () {
+            new Newsticker("newsticker_3",
+                {
+                    interval: 5000,
+                    newsInnerContainerSetStyle: { 'text-align': 'left' },
+                })
+        }, false);
+        //]]>
+    </script>
+</body>
+</html>
